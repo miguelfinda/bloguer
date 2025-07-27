@@ -13,3 +13,4 @@ divulgar: (req, res) => {
   console.log("Rota /divulgar acessada");
   res.render('pages/divulgar', { title: 'Divulgar' });
 }
+
