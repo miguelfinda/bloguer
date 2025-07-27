@@ -1,0 +1,64 @@
+<%- include('../partials/navbar') %>
+
+<section class="dizeres">
+  <div class="explanation_gener">
+    <div class="cima">
+      <h2>GÉNERO</h2>
+      <h3>Explore nossas músicas por gênero</h3>
+    </div>
+    <div class="baixo">
+      <h4>Kuduro, House, Hip hop, Kizomba... Temos tudo que você procura e muito mais.</h4>
+      <h5>Encontre as músicas ainda mais rápido explorando nossos gêneros selecionados para ti.</h5>
+    </div>
+  </div>
+</section>
+
+<div class="risca"></div>
+
+<div class="genero_em">
+  <h2>Géneros em destaque</h2>
+</div>
+
+<section class="all_category">
+  <div class="divisao_das_categorias">
+    <div class="cabeca">
+      <% const destaques = [
+        { nome: "Kuduro", img: "emana.jpg", link: "/kuduro" },
+        { nome: "House", img: "IMG-20250209-WA0010.jpg", link: "#" },
+        { nome: "Semba", img: "xuxu.jpg", link: "#" },
+        { nome: "Gheto Zouk", img: "preto_show.jpg", link: "#" },
+        { nome: "Hip Hop", img: "paulelson.jpg", link: "#" },
+        { nome: "Kizomba", img: "12furos.jpg", link: "#" },
+      ]; %>
+
+      <% destaques.forEach(cat => { %>
+        <div class="card_one">
+          <div class="info"><h3><%= cat.nome %></h3></div>
+          <div class="imagem">
+            <a href="<%= cat.link %>"><img src="/assets/imagens/imagens_artistas/<%= cat.img %>" alt=""></a>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="pernas">
+      <% const mais = [
+        "a07a260cb71e4c4ade7c000297a862bc.jpg",
+        "paulelson.jpg",
+        "IMG-20250209-WA0014.jpg",
+        "IMG-20250209-WA0012.jpg",
+        "IMG-20250209-WA0010.jpg",
+        "emana.jpg"
+      ]; %>
+
+      <% mais.forEach(imagem => { %>
+        <div class="card_two">
+          <div class="title"><h3>Zouk</h3></div>
+          <div class="eng"><a href="#"><img src="/assets/imagens/<%= imagem.includes('a07a') ? 'imagen_categorias' : 'imagens_artistas' %>/<%= imagem %>" alt=""></a></div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
