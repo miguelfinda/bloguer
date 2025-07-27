@@ -5,7 +5,7 @@ está é a seccão do meio */
 section.meio{
   width: 100%;
   height: 670px;
- background-image: url(/assets/imagens_hme/pic07.webp);
+ background-image: url(/assets/imagens/imagens_hme/pic07.webp);
  background-position: center;
  background-repeat: no-repeat;
  background-attachment:fixed;
